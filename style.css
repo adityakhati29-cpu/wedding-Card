@@ -1,0 +1,79 @@
+* { box-sizing: border-box; }
+:root {
+  --paper: #fffaf6; --blush: #f4e4df; --rose: #b87978; --ink: #493b39;
+  --muted: #8b7772; --gold: #b99a68; --line: #ead8cf;
+}
+html { scroll-behavior: smooth; }
+body { margin: 0; background: #f5ece7; color: var(--ink); font-family: "DM Sans", sans-serif; }
+.page-shell { width: min(100%, 760px); margin: 0 auto; background: var(--paper); overflow: hidden; box-shadow: 0 0 40px #6c443015; }
+.hero, .closing { text-align: center; min-height: 92svh; display: flex; flex-direction: column; justify-content: center; align-items: center; padding: 72px 25px 42px; position: relative; }
+.hero { background: radial-gradient(ellipse at 50% 42%, #fffdfb 0, #fbf0eb 68%, #f3e2dc 100%); }
+.floral-frame:before, .floral-frame:after { content: "❀  ❁  ✿"; position: absolute; color: #c18c89; opacity: .55; letter-spacing: 10px; font-size: 23px; }
+.floral-frame:before { top: 22px; left: 12px; transform: rotate(-25deg); }
+.floral-frame:after { bottom: 22px; right: 12px; transform: rotate(155deg); }
+.eyebrow { color: var(--rose); font-size: 10px; letter-spacing: 2.7px; font-weight: 600; line-height: 1.7; }
+.tiny-flower { color: var(--gold); font-size: 28px; margin: 17px 0; }
+.invite-line, .hero-subtitle { color: var(--muted); font-family: "Cormorant Garamond", serif; font-size: 21px; line-height: 1.5; }
+h1, h2, h3, p { margin-top: 0; }
+h1 { display: flex; flex-direction: column; gap: 0; margin: 14px 0; color: #805b5b; font: 500 clamp(48px, 13vw, 76px)/.92 "Cormorant Garamond", serif; }
+h1 i { font-size: 30px; color: var(--gold); font-weight: 400; margin: 9px 0; }
+.hero-subtitle { margin: 15px 0 27px; }
+.date-rule { display: flex; gap: 12px; align-items: center; color: var(--rose); letter-spacing: 2px; font-size: 10px; font-weight: 600; }
+.date-rule span { color: var(--gold); }
+.scroll-cue, .top-link { color: var(--muted); text-decoration: none; letter-spacing: 2px; font-size: 9px; margin-top: 65px; }
+.scroll-cue span { display: block; font-size: 19px; margin-top: 9px; }
+.section { padding: 76px 24px; text-align: center; }
+.section h2, .closing h2 { color: #805b5b; font: 500 clamp(39px, 10vw, 53px)/.98 "Cormorant Garamond", serif; margin: 12px 0 22px; }
+.body-copy { max-width: 440px; margin: 0 auto; color: var(--muted); font: 18px/1.65 "Cormorant Garamond", serif; }
+.welcome { background: #fffaf6; }
+.family-note { margin: 36px auto 0; padding: 23px 12px; border-top: 1px solid var(--line); border-bottom: 1px solid var(--line); max-width: 440px; color: var(--muted); font: italic 16px "Cormorant Garamond", serif; }
+.family-note h3 { color: #805b5b; font: 500 27px "Cormorant Garamond", serif; margin: 12px 0; }
+.family-note h3 span { color: var(--gold); padding: 0 6px; }
+.floral-side { background: #f8eee9; position: relative; }
+.floral-side:before { content: "✿"; position: absolute; left: 7px; top: 26px; color: #c18c89; opacity: .3; font-size: 55px; }
+.portrait-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 13px; margin: 30px 0 23px; }
+.portrait { height: 245px; background: #f0dfd8; overflow: hidden; position: relative; display: grid; place-items: center; }
+.portrait img, .together-photo img { width: 100%; height: 100%; object-fit: cover; display: block; }
+.placeholder { background: linear-gradient(145deg, #f4e4df, #ead4cc); display: grid; place-items: center; }
+.photo-hint { color: #9b7771; font-size: 11px; letter-spacing: .5px; }
+.person-card h3 { font: 500 25px "Cormorant Garamond", serif; color: #805b5b; margin: 13px 0 2px; }
+.person-card p, .photo-caption { color: var(--muted); font-size: 11px; letter-spacing: 1px; }
+.together-photo { height: 250px; background: #f0dfd8; position: relative; margin-top: 25px; }
+.together-photo .photo-hint { position: absolute; inset: 0; display: grid; place-items: center; }
+.photo-caption { margin-top: 12px; font-style: italic; }
+.events .body-copy { margin-bottom: 30px; }
+.event-list { text-align: left; display: grid; gap: 11px; }
+.event-card { display: flex; align-items: center; gap: 13px; padding: 17px 14px; background: #fffaf6; border: 1px solid #efdfd7; border-radius: 3px; }
+.event-card.featured { background: #f1dfd9; border-color: #dfc1b6; }
+.event-number { color: var(--gold); font: 20px "Cormorant Garamond", serif; }
+.event-info { flex: 1; min-width: 0; }
+.event-info h3 { color: #805b5b; font: 600 21px "Cormorant Garamond", serif; margin: 0 0 4px; }
+.event-info p { color: var(--ink); font-size: 11px; margin: 0 0 4px; }
+.event-info p span { color: var(--gold); padding: 0 3px; }
+.event-info small { color: var(--muted); font-size: 10px; }
+.event-flower { color: #bd8b83; font-size: 21px; }
+.closing { min-height: 70svh; background: #f9eee9; }
+.closing .body-copy { font-size: 17px; }
+.signature { color: var(--muted); font: italic 18px/1.6 "Cormorant Garamond", serif; margin-top: 30px; }
+.signature strong { color: #805b5b; font-size: 23px; font-weight: 500; }
+.closing .top-link { margin-top: 34px; }
+footer { text-align: center; padding: 19px; background: #f2e4de; color: #9a817a; font-size: 9px; letter-spacing: 2px; }
+@media (min-width: 600px) {
+  .hero, .closing { min-height: 760px; }
+  .section { padding: 90px 65px; }
+  .portrait { height: 340px; }
+  .together-photo { height: 360px; }
+  .event-card { padding: 20px 22px; }
+}
+
+
+/* Family invitation and venue map links */
+.family-names { display: flex; align-items: center; justify-content: center; gap: 14px; margin: 18px 0; }
+.family-names > div { flex: 1; min-width: 0; }
+.family-label { display: block; color: var(--rose); font: 600 9px "DM Sans", sans-serif; letter-spacing: 1.5px; }
+.family-names h3 { overflow-wrap: anywhere; }
+.family-ampersand { color: var(--gold); font: 25px "Cormorant Garamond", serif; }
+.family-note .family-couple { margin-top: 13px; }
+.venue-name { display: block; margin-top: 5px; }
+.map-link { display: inline-block; margin-top: 7px; color: #9a6667; font-size: 10px; text-decoration: underline; text-decoration-color: #d9b9ae; text-underline-offset: 3px; }
+.map-link:focus-visible, .top-link:focus-visible, .scroll-cue:focus-visible { outline: 2px solid var(--rose); outline-offset: 4px; }
